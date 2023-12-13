@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap");
+:root {
+  --primary-color: #03117e;
+  --secondary-color: #059adf28;
+}
+
+.active {
+  background-color: #fff;
+  padding: 0.5rem;
+  color: var(--primary-color);
+}
+
+.tabel {
+  font-family: "Poppins", sans-serif;
+}
+::-webkit-file-upload-button {
+  padding: 0.6rem 1.2rem;
+  /* background-color: rgba(211, 211, 211, 0.755); */
+  background-color: #03117e;
+  border: none;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+
