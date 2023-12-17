@@ -1,14 +1,20 @@
 import React from "react";
 import SidebarNavs from "./SidebarNavs";
+import {motion} from "framer-motion";
 
-const MobileNavs = () => {
-  return <>
- <aside  className="fixed bg-primary-color top-0 left-0 z-40 w-72 h-screen pt-20 transition-transform  border-r border-gray-200 sm:translate-x-0  transform-none">
-   <div className="h-full px-3 pb-4 overflow-y-auto bg-primary-color">
-     <SidebarNavs />
-   </div>
-</aside>
-  </>;
+const MobileNavs = ({open}) => {
+  return (
+    <>
+      <motion.aside
+        initial={{x: -300}}
+        animate={{x : 0}}
+        transition={{duration: 0.7, }}
+        className='fixed px-3  w-80    bg-primary-color top-0  z-40  sm:hidden h-screen pt-20 border-r sm:translate-x-0'
+      >
+        <SidebarNavs />
+      </motion.aside>
+    </>
+  );
 };
 
 export default MobileNavs;

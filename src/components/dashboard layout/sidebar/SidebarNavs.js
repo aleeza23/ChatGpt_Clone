@@ -3,7 +3,6 @@ import {Link, useLocation} from "react-router-dom";
 import {IoIosAddCircleOutline} from "react-icons/io";
 import {LuTally3} from "react-icons/lu";
 import {TiHomeOutline} from "react-icons/ti";
-import {FaArrowLeft} from "react-icons/fa6";
 
 const navsList = [
   {name: "Dashboard", path: "/", icon: <TiHomeOutline />},
@@ -23,7 +22,7 @@ const SidebarNavs = () => {
             to={currElm.path}
             class={`${
               path === currElm.path && "active"
-            } flex  items-center p-2  rounded-lg  hover:bg-white hover:text-blue-color  group`}
+            } flex  items-center p-2  rounded-lg transition ease-out duration-700   hover:bg-white hover:text-blue-color  group`}
           >
           <span className='flex-shrink-0 w-5 h-5  transition duration-75 text-xl  group-hover:text-blue-color dark:group-hover:text-white'>{currElm.icon}</span>
             <span className='flex-1 ms-3 whitespace-nowrap'>{currElm.name}</span>

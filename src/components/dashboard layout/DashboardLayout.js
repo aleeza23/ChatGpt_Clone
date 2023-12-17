@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import Sidebar from "./sidebar/Sidebar";
 import Content from "./content/Content";
-import {Link} from "react-router-dom";
+import {motion} from "framer-motion";
 import Header from "./header/Header";
 import MobileNavs from "./sidebar/MobileNavs";
 
@@ -10,10 +10,20 @@ const DashboardLayout = ({children}) => {
 
   return (
     <>
-      <Header open={open} setopen={setopen}/>
-     {!open ? <Sidebar open={open} /> : <MobileNavs /> } 
+      <Header open={open} setopen={setopen} />
+      <Sidebar open={open} />
+      {open && <MobileNavs open={open} />}
       <Content>{children}</Content>
-     {open &&  <div onClick={() => setopen(false)} drawer-backdrop="" className="bg-gray-900/50  fixed inset-0 z-30"></div> } 
+      {open && (
+        <motion.div
+          initial={{opacity : 0}}
+          animate={{opacity: 1}}
+          transition={{duration: 1}}
+          onClick={() => setopen(false)}
+          drawer-backdrop=''
+          className='bg-gray-900/50 sm:hidden fixed inset-0 z-30'
+        ></motion.div>
+      )}
     </>
   );
 };

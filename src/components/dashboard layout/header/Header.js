@@ -14,10 +14,11 @@ const Header = ({setopen, open }) => {
       <nav className={`sm:ml-64  bg-white border-b shadow-sm border-gray-200`}>
         <div className='px-3 py-3 lg:px-5 lg:pl-3'>
           <div className='flex items-center justify-between'>
-            <div className='flex items-center justify-start rtl:justify-end'>
+            <div className='flex items-center justify-start '>
               <button
+              
                 onClick={() => setopen((prev) => !prev)}               
-                className='inline-flex items-center p-2 text-sm text-blue-color rounded-lg sm:hidden  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600'
+                className='inline-flex items-center transition  p-2 text-sm text-blue-color rounded-lg sm:hidden  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600'
               >
                 <svg
                   className='w-6 h-6'
