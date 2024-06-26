@@ -6,18 +6,18 @@ import avatar from '../../../assets/avatar.jpg'
 import pcLogo from "../../../assets/desktop-logo.png";
 
 
-const Header = ({setopen, open }) => {
+const Header = ({ setopen, open }) => {
   const [showUser, setshowUser] = useState(false);
-  
+
   return (
     <>
-      <nav className={`sm:ml-64  bg-white border-b shadow-sm border-gray-200`}>
+      <nav className={`sm:ml-64  bg-white header `}>
         <div className='px-3 py-3 lg:px-5 lg:pl-3'>
           <div className='flex items-center justify-between'>
             <div className='flex items-center justify-start '>
               <button
-              
-                onClick={() => setopen((prev) => !prev)}               
+
+                onClick={() => setopen((prev) => !prev)}
                 className='inline-flex items-center transition  p-2 text-sm text-blue-color rounded-lg sm:hidden  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600'
               >
                 <svg
@@ -35,10 +35,11 @@ const Header = ({setopen, open }) => {
                 </svg>
               </button>
               <Link href='/' class=' ms-2 md:me-24   hidden sm:flex'>
-          <img src={pcLogo} class='w-24 me-3 logo' alt=' Logo' />
-        </Link>
+                <h1 className="font-bold text-gray-500">ChatGpt</h1>
+
+              </Link>
               <Link href='/' className=' ms-2 md:me-24 flex sm:hidden'>
-                <img src={mbLogo} className='h-8 me-3' alt='Logo' />
+                <h1 className="font-bold text-gray-500">ChatGpt</h1>
               </Link>
             </div>
             <div className='flex flex-col items-center'>
@@ -46,15 +47,15 @@ const Header = ({setopen, open }) => {
                 <div>
                   <button
                     type='button'
-                    onClick={() => setshowUser(prev => !prev) }
+                    onClick={() => setshowUser(prev => !prev)}
                     className='flex duration-300 relative text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600'
-                   
+
                   >
                     <img className="w-8 h-8 rounded-full" src={avatar} alt={'avatar'} />
                   </button>
                 </div>
-               {showUser && <UserMenu /> } 
-               
+                {showUser && <UserMenu />}
+
               </div>
             </div>
           </div>

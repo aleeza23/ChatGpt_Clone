@@ -4,13 +4,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "blue-color": "#03117e",
-        "light-blue-color": "#059adf28",
+        "blue-color": "#0D0D0D",
+        "light-blue-color": "#0D0D0D",
 
       },
       backgroundColor: {
-        "primary-color": "#03117e",
+        "primary-color": "#f9f9f9",
         "secandory-color": "#059adf28",
+        "hover-bg" : 'rgba(128, 128, 128, 0.105)'
       },
       fontFamily : {
         "text-family" : "Poppins, sans-serif",
